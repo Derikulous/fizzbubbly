@@ -15,7 +15,25 @@ Make a second fizzbuzz program that will handle this kind of extensibility.
 Running this code via ```ruby fizzbubbly.rb``` will return "fizz", "buzz", "fizzbuzz", and 79. There are three variations of the FizzBuzz, with each iteration getting to a simpler, more readable solution. The final solution iterates over 100 numbers, and for each value that is divisible by 3, 5 or 7, prints out the correct word.
 
 (2) [Derik Strattan](https://github.com/Derikulous/fizzbubbly/blob/master/fizz_adv.rb)
-
+This advanced fizz-buzz takes in a Hash of number + message, set by the user.
+To use:
+Set a new Bubble class with
+``` ruby
+your_bubble = Bubbles.new
+```
+Set the new divisible number and message.
+``` ruby
+your_bubble.new_fizz(1, "hi")
+```
+Print the hash to see your new fizz message
+``` ruby
+your_bubble.print_fizzer
+```
+And finally, set a number to be divided
+``` ruby
+your_bubble.carbonation(9)
+```
+Finally, run the ruby file in the command line ``` ruby fizz_adv.rb ```
 
 ## Authors
 
