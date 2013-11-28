@@ -28,6 +28,8 @@ end
 # test =====
 
 bub = Bubbles.new
-bub.new_fizz(1, "not bubbling")
+bub.new_fizz(8, "not bubbling")
 bub.print_fizzer
 bub.carbonation(9)
+bub.carbonation(15)
+bub.carbonation(8)
