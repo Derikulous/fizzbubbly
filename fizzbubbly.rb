@@ -52,5 +52,5 @@ end
 
 number()
 
-#1 line
+# 1 line
 puts (1..10).map { |i| (fb = [["Fizz"][i % 3], ["Buzz"][i % 5]].compact.join).empty? ? i : fb }
