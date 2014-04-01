@@ -16,3 +16,16 @@ def solution(nums)
     solution(left) + [pivot] + solution(right)
   end
 end
+
+
+# easier solution
+def solution(nums)
+  Array(nums).sort
+end
+
+# easier to understand
+def solution(nums)
+  return [] if nums.nil?
+
+  nums.sort()
+end
