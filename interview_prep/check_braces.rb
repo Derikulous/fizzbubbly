@@ -10,40 +10,21 @@
 # Efficiency constraints
 # • your function is expected to print the result in less than 2 seconds
 
-class Stack
-  def initialize
-    @store = Array.new
-  end
-
-  def pop
-    @store.pop
-  end
-
-  def push(element)
-    @store.push(element)
-    self
-  end
-
-  def size
-    @store.size
+def check_braces(expressions)
+  return 0 if expressions.size.odd?
+  arr = []
+  expressions.chars.each do |x|
+    arr.push(x)
   end
 end
-
-h = Stack.new
-p h
-@store = [1, 2, 3]
-p @store # => [1, 2, 3]
-@store.pop(2)
-p @store # => [1]
-@store.push(1, 2, 3)
-p @store
-
 
 # expressions = [ ")(){}", "[]({})", "([])", "{()[]}", "([)]" ]
 # output => 0 1 1 1 0
 
-# p check_braces(")(){}") # => 0 SyntaxError: unexpected ')'
-# p check_braces("[]({})") # => 1
-# p check_braces("([])") # => 1
-# p check_braces("{()[]}") # => 1
-# p check_braces("([)]") # => 0 raises SyntaxError: unexpected ')', expecting ']'
+
+
+p check_braces(")(){}") # => 0 SyntaxError: unexpected ')'
+p check_braces("[]({})") # => 1
+p check_braces("([])") # => 1
+p check_braces("{()[]}") # => 1
+p check_braces("([)]") # => 0 raises SyntaxError: unexpected ')', expecting ']'

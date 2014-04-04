@@ -9,9 +9,7 @@ def non_rep?(str)
       @h[char] = 1
     end
   end
-end
 
-def first_char?(str)
   str.chars.each do |char|
     if @h[char.downcase] == 1
       return char
@@ -19,11 +17,9 @@ def first_char?(str)
   end
 end
 
+
 p non_rep?("ZebraaaAAA")
-p first_char?("ZebraaaAAA")
 p @h
 p non_rep?("little")
-p first_char?("little")
 p non_rep?("AbhgugaCjAl")
-p first_char?("ABhgugaCjAl")
 p @h
