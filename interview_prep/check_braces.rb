@@ -10,21 +10,38 @@
 # Efficiency constraints
 # • your function is expected to print the result in less than 2 seconds
 
+# The most straight forward solution to this problem is to iterate through
+# the string and keep track of how many parentheses are open right now.
+# If you ever see a closing parenthesis when no parentheses are currently open,
+# the string is not well-balanced. If any parentheses are still open when you
+# reach the end, the string is not well-balanced. Otherwise it is.
+
 def check_braces(expressions)
-  return 0 if expressions.size.odd?
-  arr = []
-  expressions.chars.each do |x|
-    arr.push(x)
+
+  mirrored = { "[" => "]", "{" => "}", "(" => ")" }
+  arr = Array.new
+
+  expressions.chars.each do |char|
+    if char.match(/[\[|\{|\(]/) then arr << char
+    elsif char.match(/[\]|\}|\)]/)
+      if mirrored[arr.pop] != char
+        return 0
+      else
+        return 1
+      end
+    end
   end
+  arr.empty?
 end
+
 
 # expressions = [ ")(){}", "[]({})", "([])", "{()[]}", "([)]" ]
 # output => 0 1 1 1 0
-
-
 
 p check_braces(")(){}") # => 0 SyntaxError: unexpected ')'
 p check_braces("[]({})") # => 1
 p check_braces("([])") # => 1
 p check_braces("{()[]}") # => 1
 p check_braces("([)]") # => 0 raises SyntaxError: unexpected ')', expecting ']'
+p check_braces("[{(})]") # => 0
+p check_braces("(){[]}}(){") # => 1 this is failing....

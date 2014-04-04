@@ -20,6 +20,7 @@ end
 
 p non_rep?("ZebraaaAAA")
 p @h
-p non_rep?("little")
+p non_rep?("lIttle")
+p @h
 p non_rep?("AbhgugaCjAl")
 p @h
