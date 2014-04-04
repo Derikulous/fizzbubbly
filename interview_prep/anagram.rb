@@ -33,8 +33,6 @@ def anagram?(first_words, second_words)
   first_words == second_words ? 1 : 0
 end
 
-
-
 p anagram?("cinema", "iceman")
 p anagram?("host", "shot")
 p anagram?("aba", "bab")
