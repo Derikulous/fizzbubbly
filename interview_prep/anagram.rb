@@ -26,7 +26,7 @@
 # o (cinema, iceman) (host, shot) (aba, bab) (train, rain)
 
 def anagram?(first_words, second_words)
-  # isntead of .split(''), can use chars since Ruby 1.9.2
+  # instead of .split(''), can use chars since Ruby 1.9.2
   # first_words = first_words.split('').sort
   first_words = first_words.chars.sort
   second_words = second_words.chars.sort
