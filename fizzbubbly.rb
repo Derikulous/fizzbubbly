@@ -40,8 +40,8 @@ puts fizz_improver(15)
 puts fizz_improver(79)
 
 # A simpler version that takes in a range of numbers
-def number
-  (1..10).each do |i|
+def number(rng)
+  (1..rng).each do |i|
     x = ''
     x += 'Fizz' if i % 3 == 0
     x += 'Buzz' if i % 5 == 0
@@ -50,7 +50,7 @@ def number
   end
 end
 
-number()
+number(10)
 
 # 1 line
 puts (1..10).map { |i| (fb = [["Fizz"][i % 3], ["Buzz"][i % 5]].compact.join).empty? ? i : fb }

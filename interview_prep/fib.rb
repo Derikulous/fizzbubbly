@@ -32,5 +32,5 @@ def fib(a, b = 1, c = 0, count = 2)
   fib(a, b + c, b, count += 1)
 end
 
-p fib(2)
-p fib(100)
+p fib(10)
+
